@@ -197,7 +197,7 @@ module Jekyll
         current = @context["paginator"]["page"]
         total = @context["paginator"]["total_pages"]
 
-        return "Page #{current} of #{total} for " if current > 1
+        return "Page #{current}/#{total} - " if current > 1
       end
 
       attr_reader :context
