@@ -56,6 +56,13 @@
   <link rel="next" href="{{ paginator.next_page_path | absolute_url }}" />
 {% endif %}
 
+{% if page.next.url %}
+    <link rel="next" href="{{ page.next.url | absolute_url }}">
+{% endif %}
+{% if page.previous.url %}
+    <link rel="prev" href="{{ page.previous.url | absolute_url }}">
+{% endif %}
+
 {% if site.twitter %}
   {% if seo_tag.image %}
     <meta name="twitter:card" content="{{ page.twitter.card | default: site.twitter.card | default: "summary_large_image" }}" />
